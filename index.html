@@ -504,17 +504,21 @@
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // form handling
-  // ---- ANSLUT BACKEND HÄR ----
-  // Byt ut blocket nedan mot t.ex. fetch() till Formspree/egen backend,
-  // eller låt en mailto-länk ta över. Just nu visas bara en bekräftelse i webbläsaren.
+  // form handling — skickar offertförfrågan till din e-post via mailto
   const form = document.getElementById('quoteForm');
   const success = document.getElementById('formSuccess');
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     if (!form.checkValidity()) { form.reportValidity(); return; }
-    // const data = Object.fromEntries(new FormData(form));
-    // fetch('DIN_ENDPOINT', {method:'POST', body: new FormData(form)});
+    const d = Object.fromEntries(new FormData(form));
+    const subject = 'Offertförfrågan: ' + (d.typ || 'Projekt') + ' – ' + (d.namn || '');
+    const body = 'Namn: ' + (d.namn||'') + '\n'
+      + 'Telefon: ' + (d.tel||'') + '\n'
+      + 'E-post: ' + (d.epost||'') + '\n'
+      + 'Typ av projekt: ' + (d.typ||'') + '\n\n'
+      + 'Beskrivning:\n' + (d.meddelande||'');
+    window.location.href = 'mailto:mattias.lind132@outlook.com?subject='
+      + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     form.style.display = 'none';
     success.classList.add('show');
     success.scrollIntoView({ behavior: 'smooth', block: 'center' });
