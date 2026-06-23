@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Soltak | Tak & solceller för villor i Västmanland</title>
+<script>document.documentElement.className="js";</script>
+<!--
+  ============================================================
+  ANPASSA INNAN PUBLICERING:
+  1. Företagsnamn: sök/ersätt "Soltak" (placeholder-namn).
+  2. Kontaktuppgifter + org.nr: se [hakparenteser] i footern.
+  3. Koppla formuläret: ersätt hanteraren i <script> (data-endpoint)
+     med t.ex. Formspree, egen backend eller en mailto-länk.
+  4. Kontrollera att påståenden stämmer vid lansering
+     (behörig elektriker / registrering hos Elsäkerhetsverket).
+  ============================================================
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pine:#13392B; --pine-dark:#0D2A20; --pine-mid:#1E5340; --pine-soft:#E4ECE6;
+    --sun:#EFA12C; --sun-deep:#D98311; --sun-soft:#FBE6C4;
+    --bg:#F3F6F2; --paper:#FFFFFF; --ink:#15211B; --muted:#586860; --line:#D9E2DC;
+    --display:'Bricolage Grotesque',system-ui,sans-serif;
+    --body:'Hanken Grotesk',system-ui,sans-serif;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+    --maxw:1140px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;font-size:17px}
+  a{color:inherit;text-decoration:none}
+  img,svg{display:block;max-width:100%}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--pine-mid);font-weight:500}
+  h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.05;letter-spacing:-.02em;color:var(--ink)}
+
+  /* ---------- nav ---------- */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(243,246,242,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:1.28rem;letter-spacing:-.02em}
+  .brand .mark{width:30px;height:30px;flex:none}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a{font-size:.96rem;font-weight:500;color:var(--muted);transition:color .2s}
+  .nav-links a:hover{color:var(--ink)}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--body);font-weight:600;font-size:.96rem;padding:11px 20px;border-radius:999px;cursor:pointer;border:1px solid transparent;transition:transform .15s,background .2s,box-shadow .2s;white-space:nowrap}
+  .btn-sun{background:var(--sun);color:var(--pine-dark);box-shadow:0 1px 0 var(--sun-deep)}
+  .btn-sun:hover{background:var(--sun-deep);color:#fff;transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+  .btn-ghost:hover{border-color:var(--pine-mid);background:var(--paper)}
+  .btn-line{background:transparent;color:var(--ink);border-color:rgba(255,255,255,.35)}
+  .nav-cta{display:inline-flex}
+  .mobile-cta{display:none}
+  .burger{display:none}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;overflow:hidden}
+  .hero-in{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:78px 0 70px}
+  .hero h1{font-size:clamp(2.5rem,5.4vw,4rem);font-weight:800}
+  .hero h1 .accent{color:var(--pine-mid)}
+  .hero p.lead{font-size:1.18rem;color:var(--muted);margin:22px 0 30px;max-width:30em}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px}
+  .hero-meta span{font-family:var(--mono);font-size:.76rem;color:var(--pine);display:flex;align-items:center;gap:7px;letter-spacing:.02em}
+  .hero-meta span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--sun);flex:none}
+  .hero-art{position:relative}
+  .hero-art svg{width:100%;height:auto;filter:drop-shadow(0 24px 40px rgba(13,42,32,.18))}
+
+  /* ---------- trust strip ---------- */
+  .strip{background:var(--pine);color:#dfeae4}
+  .strip-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;padding:18px 0}
+  .strip-item{display:flex;align-items:center;gap:10px;font-size:.93rem;font-weight:500}
+  .strip-item svg{width:19px;height:19px;flex:none;color:var(--sun)}
+
+  /* ---------- sections ---------- */
+  .section{padding:84px 0}
+  .sec-head{max-width:34em;margin-bottom:42px}
+  .sec-head h2{font-size:clamp(1.9rem,3.6vw,2.6rem);margin:12px 0 14px}
+  .sec-head p{color:var(--muted);font-size:1.08rem}
+
+  /* services */
+  .feature{background:var(--pine);color:#eaf2ed;border-radius:22px;padding:42px;display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:center;margin-bottom:22px;position:relative;overflow:hidden}
+  .feature .eyebrow{color:var(--sun)}
+  .feature h3{color:#fff;font-size:1.85rem;margin:12px 0 12px}
+  .feature p{color:#c9d8d0;max-width:32em}
+  .feature .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+  .badge{font-family:var(--mono);font-size:.74rem;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.1);color:#eaf2ed;border:1px solid rgba(255,255,255,.16)}
+  .feature-art{display:flex;justify-content:center}
+  .feature-art svg{width:170px;height:auto}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:28px;transition:transform .2s,box-shadow .2s,border-color .2s}
+  .card:hover{transform:translateY(-3px);box-shadow:0 16px 30px rgba(13,42,32,.08);border-color:var(--pine-soft)}
+  .card .ic{width:44px;height:44px;border-radius:12px;background:var(--pine-soft);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+  .card .ic svg{width:24px;height:24px;color:var(--pine)}
+  .card h3{font-size:1.22rem;margin-bottom:8px}
+  .card p{color:var(--muted);font-size:.98rem}
+  .card .tag{display:inline-block;margin-top:14px;font-family:var(--mono);font-size:.72rem;color:var(--sun-deep);font-weight:500}
+
+  /* process */
+  .process{background:var(--pine-dark);color:#dceae3;position:relative}
+  .process .sec-head h2{color:#fff}
+  .process .sec-head p{color:#a9bdb2}
+  .process .eyebrow{color:var(--sun)}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .step{position:relative;padding-top:18px}
+  .step .no{font-family:var(--mono);font-size:.8rem;color:var(--sun);font-weight:600}
+  .step h3{color:#fff;font-size:1.18rem;margin:10px 0 8px}
+  .step p{color:#a9bdb2;font-size:.95rem}
+  .step::before{content:"";position:absolute;top:0;left:0;width:42px;height:3px;background:var(--sun);border-radius:2px}
+
+  /* deductions */
+  .ded-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:46px;align-items:center}
+  .ded-list{display:flex;flex-direction:column;gap:14px}
+  .ded{display:flex;align-items:baseline;gap:18px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+  .ded .pct{font-family:var(--mono);font-weight:600;font-size:1.5rem;color:var(--pine);min-width:84px}
+  .ded .pct small{font-size:.8rem;color:var(--muted);font-weight:400}
+  .ded .txt strong{font-weight:700}
+  .ded .txt span{display:block;color:var(--muted);font-size:.95rem}
+  .ded-note{font-size:.86rem;color:var(--muted);margin-top:18px;font-family:var(--mono)}
+
+  /* area */
+  .area-in{background:var(--pine-soft);border-radius:22px;padding:46px;display:flex;flex-wrap:wrap;gap:26px;align-items:center;justify-content:space-between}
+  .area-in h2{font-size:1.8rem}
+  .area-tags{display:flex;flex-wrap:wrap;gap:10px}
+  .area-tags span{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-weight:500;font-size:.95rem}
+
+  /* form */
+  .form-card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:clamp(28px,4vw,46px);max-width:740px;margin:0 auto;box-shadow:0 20px 50px rgba(13,42,32,.07)}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .field{display:flex;flex-direction:column;gap:7px}
+  .field.full{grid-column:1/-1}
+  .field label{font-size:.88rem;font-weight:600}
+  .field input,.field select,.field textarea{font-family:var(--body);font-size:1rem;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);transition:border-color .2s,box-shadow .2s}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--pine-mid);box-shadow:0 0 0 3px rgba(30,83,64,.14)}
+  .field textarea{resize:vertical;min-height:110px}
+  .form-card .btn-sun{width:100%;justify-content:center;margin-top:22px;font-size:1.02rem;padding:14px}
+  .form-success{display:none;text-align:center;padding:18px}
+  .form-success.show{display:block}
+  .form-success .check{width:56px;height:56px;margin:0 auto 16px;border-radius:50%;background:var(--pine-soft);display:flex;align-items:center;justify-content:center}
+  .form-success .check svg{width:28px;height:28px;color:var(--pine-mid)}
+  .form-success h3{font-size:1.4rem;margin-bottom:8px}
+  .form-success p{color:var(--muted)}
+
+  /* footer */
+  .footer{background:var(--pine-dark);color:#bcd0c6;padding:60px 0 30px;margin-top:20px}
+  .foot-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:34px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .foot-brand{max-width:25em}
+  .foot-brand .brand{color:#fff;margin-bottom:12px}
+  .foot-brand p{font-size:.95rem;color:#a9bdb2}
+  .foot-col h4{font-family:var(--mono);font-size:.74rem;text-transform:uppercase;letter-spacing:.16em;color:var(--sun);margin-bottom:14px;font-weight:500}
+  .foot-col a,.foot-col p{display:block;font-size:.95rem;color:#bcd0c6;margin-bottom:9px}
+  .foot-col a:hover{color:#fff}
+  .foot-bottom{padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:.85rem;color:#7d9387}
+
+  /* reveal (progressive enhancement: visible by default, animated only with JS) */
+  .reveal{transition:opacity .7s ease,transform .7s ease}
+  .js .reveal{opacity:0;transform:translateY(22px)}
+  .js .reveal.in{opacity:1;transform:none}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:920px){
+    .hero-in{grid-template-columns:1fr;gap:30px;padding:54px 0 50px}
+    .hero-art{order:-1;max-width:440px}
+    .feature{grid-template-columns:1fr;text-align:left}
+    .feature-art{justify-content:flex-start}
+    .grid3{grid-template-columns:1fr 1fr}
+    .steps{grid-template-columns:1fr 1fr;gap:26px}
+    .ded-grid{grid-template-columns:1fr;gap:28px}
+  }
+  @media (max-width:680px){
+    body{font-size:16px}
+    .nav-links{position:fixed;inset:68px 0 auto 0;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;padding:8px 0;transform:translateY(-130%);transition:transform .3s;box-shadow:0 18px 30px rgba(13,42,32,.1)}
+    .nav-links.open{transform:none}
+    .nav-links a{padding:14px 24px;font-size:1.05rem}
+    .nav-links .mobile-cta{display:inline-flex;margin:10px 24px}
+    .nav-cta{display:none}
+    .burger{display:flex;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+    .burger span{width:24px;height:2px;background:var(--ink);border-radius:2px;transition:transform .25s,opacity .25s}
+    .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .burger.open span:nth-child(2){opacity:0}
+    .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .grid3{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr}
+    .form-grid{grid-template-columns:1fr}
+    .section{padding:60px 0}
+    .feature{padding:30px}
+    .area-in{padding:32px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{scroll-behavior:auto!important}
+    .js .reveal{opacity:1;transform:none;transition:none}
+    .sun-anim{animation:none!important}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="brand" aria-label="Soltak startsida">
+      <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <circle cx="29" cy="11" r="6" fill="#EFA12C"/>
+        <path d="M4 24 L20 12 L36 24" stroke="#13392B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8 24 L20 15 L32 24" stroke="#1E5340" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+      </svg>
+      Soltak
+    </a>
+    <nav class="nav-links" id="navlinks" aria-label="Huvudmeny">
+      <a href="#tjanster">Tjänster</a>
+      <a href="#sa-funkar">Så funkar det</a>
+      <a href="#avdrag">Avdrag</a>
+      <a href="#omrade">Område</a>
+      <a href="#offert" class="btn btn-sun mobile-cta">Begär offert</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Öppna meny" aria-expanded="false"><span></span><span></span><span></span></button>
+    <a href="#offert" class="btn btn-sun nav-cta">Begär offert</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <span class="eyebrow reveal">Tak &amp; solceller · Västmanland</span>
+      <h1 class="reveal">Nytt tak och solceller <span class="accent">i samma jobb.</span></h1>
+      <p class="lead reveal">Vi renoverar tak och installerar solceller på villor i Västmanland. Ett företag, en kontakt, lägre elräkning. Priset sänks direkt på fakturan av ROT- och grön teknik-avdrag.</p>
+      <div class="hero-cta reveal">
+        <a href="#offert" class="btn btn-sun">Begär kostnadsfri offert</a>
+        <a href="#tjanster" class="btn btn-ghost">Se våra tjänster</a>
+      </div>
+      <div class="hero-meta reveal">
+        <span>Behörig elektriker</span>
+        <span>Offert inom 24 h</span>
+        <span>Pris efter avdrag</span>
+      </div>
+    </div>
+    <div class="hero-art reveal" role="img" aria-label="Illustration av ett villatak där ena halvan är nylagt tak och andra halvan solceller, med en sol ovanför.">
+      <svg viewBox="0 0 560 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- glow -->
+        <circle cx="430" cy="120" r="150" fill="#FBE6C4" opacity="0.5"/>
+        <!-- sun -->
+        <g class="sun-anim">
+          <circle cx="430" cy="118" r="42" fill="#EFA12C"/>
+          <g stroke="#EFA12C" stroke-width="5" stroke-linecap="round">
+            <line x1="430" y1="44" x2="430" y2="60"/>
+            <line x1="486" y1="62" x2="475" y2="73"/>
+            <line x1="504" y1="118" x2="488" y2="118"/>
+            <line x1="486" y1="174" x2="475" y2="163"/>
+            <line x1="374" y1="62" x2="385" y2="73"/>
+          </g>
+        </g>
+        <!-- roof plane (parallelogram) -->
+        <g>
+          <!-- left half: tiles -->
+          <path d="M70 300 L250 168 L300 200 L120 340 Z" fill="#1E5340"/>
+          <path d="M96 312 L264 188 M120 326 L288 202 M76 296 L244 172" stroke="#2C6A52" stroke-width="2.4" opacity="0.7"/>
+          <!-- right half: solar panels -->
+          <path d="M300 200 L480 264 L470 312 L120 340 Z" fill="#0D2A20"/>
+          <!-- panel grid -->
+          <g stroke="#EFA12C" stroke-width="2" opacity="0.85">
+            <path d="M338 218 L320 330 M388 236 L368 326 M438 254 L416 322"/>
+            <path d="M156 300 L470 300 M180 270 L478 286 M210 240 L484 270" opacity="0.55"/>
+          </g>
+          <!-- fascia -->
+          <path d="M120 340 L470 312 L470 326 L120 356 Z" fill="#13392B"/>
+        </g>
+        <!-- house body -->
+        <path d="M150 340 L150 432 L420 408 L420 318" fill="#F3F6F2" stroke="#D9E2DC" stroke-width="2"/>
+        <rect x="186" y="368" width="40" height="46" rx="3" fill="#E4ECE6"/>
+        <rect x="330" y="356" width="52" height="40" rx="3" fill="#FBE6C4"/>
+        <line x1="356" y1="356" x2="356" y2="396" stroke="#EFA12C" stroke-width="1.5"/>
+        <line x1="330" y1="376" x2="382" y2="376" stroke="#EFA12C" stroke-width="1.5"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="strip">
+  <div class="wrap strip-in">
+    <div class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9"/></svg>El av behörig elektriker</div>
+    <div class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round"/></svg>Svar och offert inom 24 timmar</div>
+    <div class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.25"/></svg>Pris efter ROT &amp; grön teknik</div>
+    <div class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.3 7-11a7 7 0 10-14 0c0 4.7 7 11 7 11z" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5"/></svg>Hallstahammar · Västerås</div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="tjanster">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Tjänster</span>
+      <h2>Vi tar hand om taket och energin på det.</h2>
+      <p>Renovering och energiuppgradering av villor. Allt är ROT- eller grön teknik-berättigat, så avdraget dras direkt på din faktura.</p>
+    </div>
+
+    <div class="feature reveal">
+      <div class="feature-copy">
+        <span class="eyebrow">Mest populärt</span>
+        <h3>Tak + solceller</h3>
+        <p>När taket ändå läggs om monterar vi solcellerna samtidigt. Du får ett nytt tak och en lägre elräkning i ett enda svep, med avdrag på båda delarna. En ställning, ett bygge, en kontakt.</p>
+        <div class="badges">
+          <span>ROT på takarbetet</span>
+          <span>Grön teknik på solcellerna</span>
+        </div>
+      </div>
+      <div class="feature-art" aria-hidden="true">
+        <svg viewBox="0 0 200 160" fill="none">
+          <path d="M20 110 L90 62 L110 76 L40 124 Z" fill="#2C6A52"/>
+          <path d="M110 76 L180 100 L172 132 L40 124 Z" fill="#0A2118"/>
+          <g stroke="#EFA12C" stroke-width="1.6" opacity="0.85"><path d="M128 86 L120 128 M150 94 L140 126"/></g>
+          <circle cx="166" cy="40" r="16" fill="#EFA12C"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="grid3">
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="13" rx="1"/><path d="M3 9h18M9 4v13M15 4v13M2 21h20" stroke-linecap="round"/></svg></div>
+        <h3>Solceller</h3>
+        <p>Nätanslutna solcellssystem, installerade och anslutna av behörig elektriker. Batteri och laddbox vid behov.</p>
+        <span class="tag">Grön teknik-avdrag</span>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12L12 4l9 8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 11v8h14v-8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Takrenovering</h3>
+        <p>Omläggning och byte av yttertak på villa i tegel, betong eller plåt. Tätt, snyggt och fackmässigt utfört.</p>
+        <span class="tag">ROT-avdrag på arbetet</span>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17h18M5 17v-5M19 17v-5M3 12h18l-2-4H5z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Altan &amp; trädäck</h3>
+        <p>Nybyggd eller renoverad altan i trä eller komposit. Från enkel uteplats till däck i flera nivåer.</p>
+        <span class="tag">ROT-avdrag på arbetet</span>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M4 9h16M4 15h16M10 3v18" stroke-linecap="round"/></svg></div>
+        <h3>Fasadrenovering</h3>
+        <p>Renovering och uppfräschning av fasad som lyfter hela huset och skyddar mot väder och vind.</p>
+        <span class="tag">ROT-avdrag på arbetet</span>
+      </div>
+      <div class="card reveal" style="display:flex;flex-direction:column;justify-content:center;background:var(--pine);color:#eaf2ed;border-color:transparent">
+        <h3 style="color:#fff">Något annat?</h3>
+        <p style="color:#c9d8d0">Har du ett renoveringsprojekt som inte listas här? Hör av dig ändå, vi tittar gärna på det.</p>
+        <a href="#offert" class="tag" style="color:var(--sun);font-weight:600">Beskriv ditt projekt →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section process" id="sa-funkar">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Så funkar det</span>
+      <h2>Fyra steg från idé till färdigt.</h2>
+      <p>Tydligt och utan strul. Du har en kontaktperson hela vägen.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="no">Steg 01</div><h3>Förfrågan</h3><p>Berätta vad du vill göra. Vi bokar platsbesök vid behov.</p></div>
+      <div class="step reveal"><div class="no">Steg 02</div><h3>Offert</h3><p>Du får ett fast pris, redan med ROT- och grön teknik-avdraget inräknat.</p></div>
+      <div class="step reveal"><div class="no">Steg 03</div><h3>Vi bygger</h3><p>Yrkeskunnig personal utför jobbet. Elen sköts av behörig elektriker.</p></div>
+      <div class="step reveal"><div class="no">Steg 04</div><h3>Klart</h3><p>Färdigt, städat och dokumenterat, med garanti på arbetet.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DEDUCTIONS -->
+<section class="section" id="avdrag">
+  <div class="wrap ded-grid">
+    <div class="reveal">
+      <span class="eyebrow">ROT &amp; grön teknik</span>
+      <h2 style="font-size:clamp(1.9rem,3.6vw,2.6rem);margin:12px 0 14px">Du betalar mindre, direkt på fakturan.</h2>
+      <p style="color:var(--muted);font-size:1.08rem">Staten subventionerar en del av kostnaden för renovering och energiteknik i hemmet. Vi drar av det åt dig på fakturan och begär ersättningen från Skatteverket, så du betalar bara mellanskillnaden.</p>
+      <p class="ded-note">Avdrag förutsätter att du har tillräckligt med skatt att dra mot. Satser och tak enligt Skatteverket; kontrolleras vid offert.</p>
+    </div>
+    <div class="ded-list reveal">
+      <div class="ded"><div class="pct">30%<br><small>arbetet</small></div><div class="txt"><strong>ROT-avdrag</strong><span>Tak, altan och fasad, på arbetskostnaden.</span></div></div>
+      <div class="ded"><div class="pct">15%<br><small>2026</small></div><div class="txt"><strong>Grön teknik för solceller</strong><span>På både arbete och material.</span></div></div>
+      <div class="ded"><div class="pct">50%<br><small>grön teknik</small></div><div class="txt"><strong>Batteri &amp; laddbox</strong><span>En smart komplettering till solcellerna.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- AREA -->
+<section class="section" id="omrade" style="padding-top:0">
+  <div class="wrap">
+    <div class="area-in reveal">
+      <div>
+        <span class="eyebrow">Verksamhetsområde</span>
+        <h2 style="margin-top:10px">Vi jobbar i hela Västmanland.</h2>
+      </div>
+      <div class="area-tags">
+        <span>Hallstahammar</span><span>Västerås</span><span>Surahammar</span><span>Köping</span><span>Sala</span><span>Fagersta</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="section" id="offert" style="background:var(--pine-soft)">
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;margin:0 auto 36px">
+      <span class="eyebrow">Begär offert</span>
+      <h2>Få en kostnadsfri offert.</h2>
+      <p style="margin:0 auto">Beskriv ditt projekt så hör vi av oss inom 24 timmar. Inga förpliktelser.</p>
+    </div>
+    <div class="form-card reveal">
+      <form id="quoteForm" novalidate>
+        <div class="form-grid">
+          <div class="field"><label for="namn">Namn</label><input id="namn" name="namn" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="tel">Telefon</label><input id="tel" name="tel" type="tel" autocomplete="tel" required></div>
+          <div class="field full"><label for="epost">E-post</label><input id="epost" name="epost" type="email" autocomplete="email" required></div>
+          <div class="field full"><label for="typ">Typ av projekt</label>
+            <select id="typ" name="typ">
+              <option>Tak + solceller</option>
+              <option>Solceller</option>
+              <option>Takrenovering</option>
+              <option>Altan / trädäck</option>
+              <option>Fasadrenovering</option>
+              <option>Annat</option>
+            </select>
+          </div>
+          <div class="field full"><label for="meddelande">Beskriv ditt projekt</label><textarea id="meddelande" name="meddelande" placeholder="T.ex. villa i Hallstahammar, ca 120 m² tak, vill lägga om taket och sätta solceller."></textarea></div>
+        </div>
+        <button type="submit" class="btn btn-sun">Skicka förfrågan</button>
+      </form>
+      <div class="form-success" id="formSuccess" role="status">
+        <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Tack! Förfrågan mottagen.</h3>
+        <p>Vi återkommer med en offert inom 24 timmar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand">
+          <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="29" cy="11" r="6" fill="#EFA12C"/><path d="M4 24 L20 12 L36 24" stroke="#EFA12C" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/></svg>
+          Soltak
+        </div>
+        <p>Tak, solceller och renovering för villor i Västmanland. Skickligt hantverk, behörig el och priser efter avdrag.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Tjänster</h4>
+        <a href="#tjanster">Tak + solceller</a>
+        <a href="#tjanster">Solceller</a>
+        <a href="#tjanster">Takrenovering</a>
+        <a href="#tjanster">Altan &amp; fasad</a>
+      </div>
+      <div class="foot-col">
+        <h4>Kontakt</h4>
+        <a href="tel:+46000000000">[Telefonnummer]</a>
+        <a href="mailto:hej@soltak.se">[E-postadress]</a>
+        <p>[Gatuadress, Hallstahammar]</p>
+      </div>
+      <div class="foot-col">
+        <h4>Företaget</h4>
+        <p>[Företagsnamn] AB</p>
+        <p>Org.nr [xxxxxx-xxxx]</p>
+        <p>F-skatt registreras vid start</p>
+        <p>El via behörig samarbetspartner</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> Soltak. Alla rättigheter förbehållna.</span>
+      <span>Hallstahammar · Västmanland</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // mobile menu
+  const burger = document.getElementById('burger');
+  const links = document.getElementById('navlinks');
+  burger.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open'); burger.classList.remove('open'); burger.setAttribute('aria-expanded','false');
+  }));
+
+  // year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // form handling
+  // ---- ANSLUT BACKEND HÄR ----
+  // Byt ut blocket nedan mot t.ex. fetch() till Formspree/egen backend,
+  // eller låt en mailto-länk ta över. Just nu visas bara en bekräftelse i webbläsaren.
+  const form = document.getElementById('quoteForm');
+  const success = document.getElementById('formSuccess');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    // const data = Object.fromEntries(new FormData(form));
+    // fetch('DIN_ENDPOINT', {method:'POST', body: new FormData(form)});
+    form.style.display = 'none';
+    success.classList.add('show');
+    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+</script>
+</body>
+</html>
